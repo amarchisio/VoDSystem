@@ -1,0 +1,91 @@
+<!DOCTYPE hbs>
+<div class="container">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+ <form class="form-signup" action="/vodsystem/SignUp" method="post">
+   <h2 class="form-signup-heading">Join the Video On Demand system today</h2>
+   <!--  <label for="inputName" class="sr-only">Full Name</label>
+       <input type="name" name="inputName" class="form-control" placeholder="Full Name"><br> -->
+     <label for="inputName" class="sr-only">User Name</label>
+       <input type="username" name="inputName" class="form-control" placeholder="User Name"><br>
+   <!--  <label for="inputPhone" class="sr-only">Phone Number</label>
+       <input type="phone" name="inputPhone" class="form-control" placeholder="Phone Number"><br> -->
+     <label for="inputPassword" class="sr-only">Password</label>
+       <input type="password" name="inputPassword1" class="form-control" placeholder="Password"><br>
+     <label for="inputPassword" class="sr-only">Password</label>
+       <input type="password" name="inputPassword2" class="form-control" placeholder="Confirm Password"><br>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+    <h2 style="text-align: center"><a class="btn btn-lg btn-primary btn-block" href="/vodsystem/login" type="submit">Log In</a></h2>
+
+
+ </form>
+ 
+</div> <!-- /container -->
+{{#if exist}}
+<h3 style="color:red;">Username already exists</h3>
+{{/if}}
+{{#if invalid}}
+<h3 style="color:red;">Username is not valid format. Please retry!</h3>
+{{/if}}
+{{#if success}}
+<h3 style="color:red;">User creation is successful</h3>
+{{/if}}
+<style >
+body{
+ background: rgb(155, 188, 223);
+ font-family: arvo;
+}
+.container{
+   width: 750px;
+   padding-top: 60px;
+   margin-right: auto;
+   margin-left: auto;
+}
+.form-signup-heading{
+   margin-bottom: 20px;
+   font-size: 30px;
+   text-align: center;
+}
+.form-signup{
+   max-width: 330px;
+   padding: 15px;
+   margin: 0 auto;
+}
+.form-signup .form-control {
+   position: relative;
+   height: auto;
+   padding: 10px;
+   font-size: 16px;
+}
+.sr-only {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0,0,0,0);
+   border: 0;
+}
+.form-control {
+   display: block;
+   width: 100%;
+   height: 34px;
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #555;
+   background-color: #fff;
+   border-radius: 4px;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+ }
+ .btnSignUp {
+
+     padding: 10px 16px;
+     font-size: 18px;
+     border-radius: 6px;
+ }
+</style>

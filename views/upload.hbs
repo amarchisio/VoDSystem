@@ -1,0 +1,11 @@
+<!DOCTYPE hbs>
+<link href="style.css">
+
+<form method="post" action="/vodsystem/upload">
+    <h2>Upload a Video</h2>
+        <label for="inputVideo" class="sr-only">Video: </label>
+            <input type="file" name="inputVideo" accept="video/*"><br>
+        <label for="inputMetadata" class="sr-only">Metadata:</label>
+            <textarea type="bio" cols="50" rows="10" name="inputMetadata" class="form-control" placeholder="Enter video metadata here"></textarea><br>
+        <button class="btnSignUp" type="submit">Upload video</button>
+</form>

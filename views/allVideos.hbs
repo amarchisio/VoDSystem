@@ -1,0 +1,142 @@
+<!DOCTYPE hbs>
+
+    <div class="container">
+
+      <div><!--TITLE(Could add background image)-->
+        <a id="logout" href="/vodsystem">Log Out</a>
+        <h1>Video On Demand</h1>
+      </div>
+      
+      <div><!--Welcome-->
+        <h2 id="welcome">Welcome: {{username}}</h2>
+      </div><br>
+      <ul style="text-align:center">
+         <li ><a style="color:white" href="/vodsystem/userpage">Home</a></li>
+         <li ><a style="color:white" href="/vodsystem/changePassword">Change Password</a></li>
+         <li ><a style="color:white" href="/vodsystem/editUserInfo">Edit User Info</a></li>
+         <li ><a style="color:white" href="/vodsystem/allVideos">View Videos</a></li>
+      </ul>
+      
+      <div id="video-selection">
+        <h2>All Videos</h2>
+          <div id="video-box">
+            
+            <h2>Bomb Burrito</h2>
+            <h3>by Bowling4SoupFan32</h3>
+            <video src = "https://firebasestorage.googleapis.com/v0/b/vodsystem-43ff0.appspot.com/o/bomb_burrito.mp4?alt=media&token=88491d6e-6a3d-4ba0-988e-1ddc2108da00" controls preload width="800" height="600"></video>
+            
+            <h2>Burger King Classic Grilled Hotdog</h2>
+            <h3>by Bowling4SoupFan32</h3>
+            <video src ="https://firebasestorage.googleapis.com/v0/b/vodsystem-43ff0.appspot.com/o/classic_grilled_hotdog.mp4?alt=media&token=cb38d790-93f2-4eb2-9303-ec2d3b5a6fad" controls preload controls preload  width="800" height="600"></video>
+            
+            <h2>Kellog's Frosted Flakes</h2>
+            <h3>by Bowling4SoupFan32</h3>
+            <video src ="https://firebasestorage.googleapis.com/v0/b/vodsystem-43ff0.appspot.com/o/kellogs_frosted_flakes.mp4?alt=media&token=de560fbe-cc2c-427e-a6c3-f2b02a460fbb" controls preload  width="800" height="600"></video>
+            
+            <h2>Folger's Instant Coffee (Weekend for Craig Special)</h2>
+            <h3>by Bowling4SoupFan32</h3>
+            <video src ="https://firebasestorage.googleapis.com/v0/b/vodsystem-43ff0.appspot.com/o/folgers_coffee.mp4?alt=media&token=3c31f7e1-3a70-4fc4-b2fd-4dacca68619d" controls preload width="800" height="600"></video>
+            
+            <h2>Chiquita Pineapple (Pat's Birthday Special)</h2>
+            <h3>by Bowling4SoupFan32</h3>
+            <video src ="https://firebasestorage.googleapis.com/v0/b/vodsystem-43ff0.appspot.com/o/chiquita_pineapple.mp4?alt=media&token=9c1eb2aa-e190-400e-87fc-f7dc6e8108c8" controls preload width="800" height="600"></video>
+         
+            <h2>Massive Volcano Eruptions Caught on Camera</h2>
+            <h3>by VulcanMan123</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6Ys7uPivBLg" frameborder="0" allowfullscreen></iframe>
+           
+            <h2>Angry Eam vs Rider -RAMCAM Edition-</h2>
+            <h3>by Rambro</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6jgjk3DsN7c" frameborder="0" allowfullscreen></iframe>
+           
+           </div>
+      </div>
+      
+    </div>
+    <style>
+    body{
+      background: rgb(155, 188, 223);
+    }
+    #logout{
+      float: right;
+      color: white;
+      background: #777;
+      border-radius: 5px;
+      padding: 5px;
+
+    }
+    .Logo{
+      margin-top: 0;
+      padding: 20px;
+      font-family: arvo;
+      font-size: 40px;
+      text-align: center;
+      color: white;
+    }
+    li{
+      background: #777;
+      color: white;
+      /*Make rounded blocks*/
+      border-radius: 5px;
+      /*Put the list in one line*/
+      display: inline-block;
+      /*Eliminate the bullets*/
+      list-style-type: none;
+      padding: 5px 10px;
+      width: 20%;
+      text-align: center;
+    }
+    #abc {
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    display: none;
+    position:fixed;
+    background-color:#313131;
+    overflow:auto
+    }
+    .close {
+    height: 30px;
+    width: 30px;
+    position:absolute;
+    right:-14px;
+    top:-14px;
+    cursor:pointer
+    }
+
+    form {
+    max-width:300px;
+    min-width:250px;
+    padding:10px 50px;
+    border:2px solid gray;
+    border-radius:10px;
+    font-family:raleway;
+    background-color:#e2e2e2
+    }
+    #welcome{
+      text-align: center;
+      background: rgb(155, 188, 223);
+      border-top: 100;
+      border-color: #777;
+      border-style: solid;
+      padding: 10px;
+    }
+    #video-selection{
+      text-align: center;
+      background: rgb(155, 188, 223);
+      border-top: 100;
+      border-color: #777;
+      border-style: solid;
+      padding: 10px;
+    }
+    #video-box{
+      text-align: center;
+      background: rgb(155, 188, 223);
+      border-top: 100;
+      border-color: #777;
+      border-style: solid;
+      padding: 10px;
+    }
+
+    </style>
