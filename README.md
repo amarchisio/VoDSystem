@@ -1,2 +1,2 @@
 # VoDSystem
-VoD System for Software Engineering Course
+Video On Demand Web Application
